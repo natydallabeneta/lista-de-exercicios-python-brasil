@@ -16,5 +16,3 @@ def escreva_um_numero():
     numero = int(input('Digite um número: '))
     print(f'O número digitado foi: {numero}')
 
-escreva_um_numero()
-

@@ -24,7 +24,6 @@ def calcular_tempo_de_download():
 
     arquivo_mb = int(input('Informe o tamanho de um arquivo para download:'))
     velocidade_mbps = int(input('Informe a velocidade de um link de Internet:'))
-
     tempo = round((arquivo_mb * 8)/velocidade_mbps/60)
 
     print(f'O tempo aproximado do Download é: {tempo} minuto(s)')

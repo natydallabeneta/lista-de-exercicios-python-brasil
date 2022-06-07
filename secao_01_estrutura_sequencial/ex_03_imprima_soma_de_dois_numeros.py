@@ -21,4 +21,4 @@ def imprima_a_soma_de_dois_numeros():
         numero = int(input('Digite um número: '))
         numeros_digitados.append(numero)
         soma = sum(numeros_digitados)
-    print(f'A soma dos dois números informados é: {soma}')
+    print(f'A soma dos dois números informados é {soma}')

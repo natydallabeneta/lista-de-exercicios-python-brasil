@@ -9,11 +9,11 @@ Mostrar a área com 2 casas decimais.
     >>> ex_07_area_quadrado.input = lambda k: '2'
     >>> ex_07_area_quadrado.calcular_area_de_quadrado()
     A área do quadrado com esse lado é: 4.00
-    O dobro da aŕea do quadrado é: 8.00
+    O dobro da área do quadrado é: 8.00
     >>> ex_07_area_quadrado.input = lambda k: '2.5'
     >>> ex_07_area_quadrado.calcular_area_de_quadrado()
     A área do quadrado com esse lado é: 6.25
-    O dobro da aŕea do quadrado é: 12.50
+    O dobro da área do quadrado é: 12.50
 
 """
 

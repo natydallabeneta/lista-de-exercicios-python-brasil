@@ -23,4 +23,3 @@ def transformar_para_fahrenheit():
     graus_fahrenheit = (graus_celsius*1.8)+32
 
     print(f'Essa temperatura é de {round(graus_fahrenheit)} Fahrenheit')
-

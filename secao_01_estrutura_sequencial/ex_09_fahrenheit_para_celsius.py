@@ -24,7 +24,3 @@ def transformar_para_celsius():
     graus_celsius = 5 * (((graus_fahrenheit-32)/9))
 
     print(f'Essa temperatura é de {round(graus_celsius)} Celsius')
-
-
-
-transformar_para_celsius()

@@ -13,7 +13,7 @@ Mostrar a área com 2 casas decimais.
     >>> ex_07_area_quadrado.input = lambda k: '2.5'
     >>> ex_07_area_quadrado.calcular_area_de_quadrado()
     A área do quadrado com esse lado é: 6.25
-    O dobro da aŕea do quadrado é: 12.50
+    O dobro da área do quadrado é: 12.50
 
 """
 
@@ -24,5 +24,4 @@ def calcular_area_de_quadrado():
     area_do_quadrado = round(area ** 2,2)
 
     print(f'A área do quadrado com esse lado é: {area_do_quadrado}')
-    print(f'O dobro da aŕea do quadrado é: {round(area_do_quadrado*2,2)}')
-
+    print(f'O dobro da área do quadrado é: {area_do_quadrado*2}')

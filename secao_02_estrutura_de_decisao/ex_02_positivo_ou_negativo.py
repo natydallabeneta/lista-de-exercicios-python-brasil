@@ -21,8 +21,8 @@ def positivo_ou_negativo(n):
     n = int(input('Digite um valor: '))
 
     if n == 0:
-        return 'não nem positivo nem negativo'
+        print("'não nem positivo nem negativo'")
     elif n < 0:
-        return 'negativo'
+        print("'negativo'")
     else:
-        return 'positivo'
+        print("'positivo'")

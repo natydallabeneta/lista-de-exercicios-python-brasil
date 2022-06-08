@@ -24,8 +24,5 @@ def maior_de_dois_numeros(x, y):
     else:
         maior = y
 
-
-
-    print(f'maior_de_dois_numeros{x,y}')
     print(f'{maior}')
 

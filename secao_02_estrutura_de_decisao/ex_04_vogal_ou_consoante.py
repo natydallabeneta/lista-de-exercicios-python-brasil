@@ -24,3 +24,4 @@ def vogal_ou_consoante(letra):
         print("'vogal'")
     else:
         print("'consoante'")
+

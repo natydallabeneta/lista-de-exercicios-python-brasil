@@ -25,3 +25,5 @@ def calcular_maior_de_3_numeros(x, y, z):
         maior = y
     elif z > x and z > y:
         maior = z
+
+    print(f'{maior}')

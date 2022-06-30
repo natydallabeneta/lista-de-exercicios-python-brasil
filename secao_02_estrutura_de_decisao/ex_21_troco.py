@@ -30,7 +30,6 @@ def calcular_troco(valor: int) -> tuple[None, int] | tuple[str, int | Any]:
     """Escreva aqui em baixo a sua solução"""
 
     valor_do_saque = valor
-
     centenas_str = quinzenas_str = dezenas_str = cinco_str = unidades_str = ''
 
     if valor_do_saque > 600:

@@ -23,10 +23,9 @@ uma nota de 5 e quatro notas de 1.
     >>> calcular_troco(399)
     '3 notas de R$ 100, 1 nota de R$ 50, 4 notas de R$ 10, 1 nota de R$ 5 e 4 notas de R$ 1'
 """
-from typing import Tuple, Any
 
 
-def calcular_troco(valor: int) -> tuple[None, int] | tuple[str, int | Any]:
+def calcular_troco(valor):
     """Escreva aqui em baixo a sua solução"""
 
     valor_do_saque = valor

@@ -105,3 +105,6 @@ def decompor_numero(numero: int):
 
             else:
                 print(f"'{numero_digitado} = { dezenas_str} e {unidades_str}'")
+
+
+

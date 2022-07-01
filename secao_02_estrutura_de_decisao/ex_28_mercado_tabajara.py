@@ -47,3 +47,32 @@ Mostre o restultado com duas casas decimais
 
 def calcular_preco_da_carne(tipo_de_carne: str, kilos_de_carne: int, forma_de_pagamento: str) -> str:
     """Escreva aqui em baixo a sua solução"""
+
+    desconto = 0
+    preco_por_kg = 0
+
+    if kilos_de_carne <= 5:
+        file_duplo_kg = 4.90
+        alcatra_kg = 5.90
+        picanha_kg = 6.90
+    else:
+        file_duplo_kg = 5.80
+        alcatra_kg = 6.80
+        picanha_kg = 7.80
+
+    if tipo_de_carne == 'Filé Duplo':
+        preco_por_kg = file_duplo_kg
+    elif tipo_de_carne == 'Alcatra':
+        preco_por_kg = alcatra_kg
+    elif tipo_de_carne == 'Picanha':
+        preco_por_kg = picanha_kg
+
+    valor_da_compra = preco_por_kg * kilos_de_carne
+
+    if forma_de_pagamento == 'dinheiro' or forma_de_pagamento == 'pix':
+        valor_da_compra -= desconto
+        print(f"'{kilos_de_carne} kg de {tipo_de_carne} a R$ {preco_por_kg:.2f}/kg saem a R$ {valor_da_compra:.2f}. Não há desconto, pagamento feito com {forma_de_pagamento}'")
+    else:
+        desconto = valor_da_compra * 0.05
+        valor_da_compra_com_desconto = valor_da_compra - desconto
+        print(f"'{kilos_de_carne} kg de {tipo_de_carne} a R$ {preco_por_kg:.2f}/kg saem a R$ {valor_da_compra:.2f}. Com desconto de 5% pelo pagamento feito com {forma_de_pagamento}, fica R$ {valor_da_compra_com_desconto:.2f}'")

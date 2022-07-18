@@ -5,8 +5,7 @@ https://wiki.python.org.br/EstruturaDeRepeticao
 Faça um programa que calcule o número médio de alunos por turma. Para isto, peça a quantidade de turmas e a quantidade
 de alunos para cada turma. As turmas não podem ter mais de 40 alunos e devem ter ao menos um aluno.
 Arredonde o valor da média para baixo.
-
-    >>> from secao_03_estrutura_de_repeticao import ex_27_alunos_por_turma
+    >>> import ex_27_alunos_por_turma
     >>> entradas = ['1', '1']
     >>> ex_27_alunos_por_turma.input = lambda k: entradas.pop()
     >>> ex_27_alunos_por_turma.calcular_media_de_alunos_por_turma()
@@ -47,8 +46,7 @@ def calcular_media_de_alunos_por_turma():
         if 1 <= alunos <= 40:
             alunos_por_turma.append(alunos)
             total_turmas += 1
-        else:
-            print(f'Uma turma deve ter de 1 a 40 alunos, não é possível ter {alunos} alunos')
+
 
     for i in alunos_por_turma:
         soma += i

@@ -56,3 +56,12 @@ da média das alturas e dos pesos dos clientes
 
 def rodar_senso():
     """Escreva aqui em baixo a sua solução"""
+
+
+
+
+
+
+
+
+

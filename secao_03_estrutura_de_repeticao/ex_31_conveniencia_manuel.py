@@ -11,7 +11,7 @@ O programa deve então mostrar o total da compra e perguntar o valor em dinheiro
 calcular e mostrar o valor do troco. Após esta operação, o programa deverá voltar ao ponto inicial,
 para registrar a próxima compra.
 
-    >>> from secao_03_estrutura_de_repeticao import ex_31_conveniencia_manuel
+    >>> import ex_31_conveniencia_manuel
     >>> entradas = ['-1']  # Encerrando o programa sem nenhuma compra
     >>> ex_31_conveniencia_manuel.input = lambda k: entradas.pop()
     >>> ex_31_conveniencia_manuel.rodar_programa_de_caixa()
@@ -56,3 +56,32 @@ para registrar a próxima compra.
 
 def rodar_programa_de_caixa():
     """Escreva aqui em baixo a sua solução"""
+
+    print('Lojas Tabajara')
+    i = 1
+    total = 0
+    while True:
+        preco = float(input('Produto %d: R$ ' % i))
+        if preco == 0:
+            break
+        total += preco
+        i += 1
+
+    print(f'Total: R$ {total:.2f}')
+    dinheiro = float(input('Digite o valor fornecido pelo cliente: '))
+    print(f'Dinheiro: R${dinheiro:>9.2f}')
+    troco = dinheiro - total
+    print(f'Troco: R$ {troco:>9.2f}')
+    print('-------------------')
+    print('Programa encerrado!')
+
+
+
+
+
+
+
+
+
+
+

@@ -7,7 +7,7 @@ cada um deles. O usuário deverá informar a quantidade de CDs e o valor para em
 
 Mostre os valores monetórios com duas casas decimais..
 
-    >>> from secao_03_estrutura_de_repeticao import ex_28_colecao_de_cds
+    >>> import ex_28_colecao_de_cds
     >>> entradas = ['1', '1']
     >>> ex_28_colecao_de_cds.input = lambda k: entradas.pop()
     >>> ex_28_colecao_de_cds.calcular_estatisticas_colecao_de_cd()
@@ -38,3 +38,23 @@ Mostre os valores monetórios com duas casas decimais..
 
 def calcular_estatisticas_colecao_de_cd():
     """Escreva aqui em baixo a sua solução"""
+
+    quantidade_cds = input('Informe a quantidade de CDs: ')
+    total_cds = 0
+    valores = []
+    soma = 0
+
+    while total_cds != quantidade_cds:
+        valor_por_cd = float(input('Digite o valor para em cada CD. R$: '))
+        valores.append(valor_por_cd)
+        total_cds += 1
+
+    for valor in valores:
+        soma += valor
+        media = soma / quantidade_cds
+
+
+
+    print(f'Número de cds: {quantidade_cds}')
+    print(f'Valor total da coleção: R$ {soma:.2f}')
+    print(f'Custo médio dos cds: R$ {media:.2f}')

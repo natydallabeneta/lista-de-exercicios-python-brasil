@@ -19,3 +19,15 @@ vetor.
 
 def calcular_soma_de_quadrados(inteiros: list) -> int:
     """Escreva aqui em baixo a sua solução"""
+
+    soma = 0
+    if not inteiros:
+        return 0
+
+    for n in inteiros:
+        quadrado = n * n
+        soma += quadrado
+
+    return soma
+
+

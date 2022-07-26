@@ -109,3 +109,94 @@ comprados.
 
 def fechar_conta(*itens):
     """Escreva aqui em baixo a sua solução"""
+
+    # VARIANTES
+    valor_final = 0
+    total_itens_pedido = 0
+    pedido = {}
+
+    # PRINT CABEÇALHO
+    print('_____________________________________________________________________________')
+    print('|                              RESUMO DA CONTA                              |')
+    print('|---------------------------------------------------------------------------|')
+    print('| Epecificação     | Código | Preço Unitário (R$) | Quantidade | Total (R$) |')
+
+    # PRINT FUNÇÃO VAZIA
+    if not itens:
+        print('|---------------------------------------------------------------------------|')
+        print('| Total Geral:                                    |          0 |       0.00 |')
+        print('-----------------------------------------------------------------------------')
+
+    # COLOCAR OS ITENS EM UM DICIONÁRIO PARA TOTALIZAR A QUANTIDADE DE ITEM
+    for item in itens:
+        chave = item[0]
+        valor = item[1]
+        if chave in pedido:
+            pedido[chave] += valor
+            total_itens_pedido += valor
+        else:
+            pedido[chave] = valor
+            total_itens_pedido += valor
+
+    # VALOR POR ITENS
+    for chave, valor in pedido.items():
+        if chave == '100':
+            lanche = 'Cachorro Quente'
+            quantidade = valor
+            valor_lanche = 1.20
+            total_pedido = valor_lanche * quantidade
+            valor_final += total_pedido
+
+        if chave == '101':
+            lanche = 'Bauru Simples'
+            quantidade = valor
+            valor_lanche = 1.30
+            total_pedido = valor_lanche * quantidade
+            valor_final += total_pedido
+
+        if chave == '102':
+            lanche = 'Bauru com Ovo'
+            quantidade = valor
+            valor_lanche = 1.50
+            total_pedido = valor_lanche * quantidade
+            valor_final += total_pedido
+
+        if chave == '103':
+            lanche = 'Hamburger'
+            quantidade = valor
+            valor_lanche = 1.20
+            total_pedido = valor_lanche * quantidade
+            valor_final += total_pedido
+
+        if chave == '104':
+            lanche = 'Cheeseburger'
+            quantidade = valor
+            valor_lanche = 1.30
+            total_pedido = valor_lanche * quantidade
+            valor_final += total_pedido
+
+        if chave == '105':
+            lanche = 'Refrigerante'
+            quantidade = valor
+            valor_lanche = 1.0
+            total_pedido = valor_lanche * quantidade
+            valor_final += total_pedido
+
+        print('| ', end='')
+        print(f'{lanche:<15}', end='  | ')
+        print(f'{chave:.8}', end='    | ')
+        print(f'{valor_lanche:.2f}', end='                |')
+        print(f' {quantidade:>10} ', end='|       ')
+        print(f'{quantidade * valor_lanche:.2f} |')
+
+    if len(itens) == 1:
+        print('|---------------------------------------------------------------------------|')
+        print(
+        f'| Total Geral:                                    |          {valor} |       {valor_lanche:.2f} |')
+        print('-----------------------------------------------------------------------------')
+
+    if len(itens) > 1:
+        print('|---------------------------------------------------------------------------|')
+        print(f'| Total Geral:                                    |{total_itens_pedido:11} | {valor_final:10.2f} |')
+        print('-----------------------------------------------------------------------------')
+

@@ -20,3 +20,21 @@ deverão ser compostos pelos elementos intercalados dos dois outros vetores.
 def intercalar(lista_1: list, lista_2: list) -> list:
     """Escreva aqui em baixo a sua solução"""
 
+    primeira_lista = lista_1
+    segunda_lista = lista_2
+
+    if not lista_1 and not lista_2:
+        return []
+
+    else:
+        lista_intercalada = primeira_lista + segunda_lista   # juntar as duas listas em uma variante
+        lista_intercalada[::2] = primeira_lista              # Substitui os itens da lista intercalada do inicio ao final de dois em dois, pelos itens da lista 1
+        lista_intercalada[1::2] = segunda_lista              # Substitui os itens da lista intercalada do item 1 ao final de dois em dois, pelos itens da lista 2
+        return lista_intercalada
+
+
+
+
+
+
+

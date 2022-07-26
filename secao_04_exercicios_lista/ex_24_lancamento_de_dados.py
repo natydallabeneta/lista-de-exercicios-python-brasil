@@ -37,3 +37,25 @@ Mostre na tela:
 
 def lancar_dados(*valor_lancamentos):
     """Escreva aqui em baixo a sua solução"""
+
+    total_de_lancamentos = len(valor_lancamentos)
+    numero_1 = valor_lancamentos.count(1)
+    numero_2 = valor_lancamentos.count(2)
+    numero_3 = valor_lancamentos.count(3)
+    numero_4 = valor_lancamentos.count(4)
+    numero_5 = valor_lancamentos.count(5)
+    numero_6 = valor_lancamentos.count(6)
+
+    lado_que_caiu_mais_vezes = max(numero_1, numero_2, numero_3, numero_4, numero_5, numero_6)
+
+    lado_que_caiu_mais_vezes = max(numero_1, numero_2, numero_3, numero_4, numero_5, numero_6)
+    posicao_maior = (numero_1, numero_2, numero_3, numero_4, numero_5, numero_6).index(lado_que_caiu_mais_vezes)
+
+    print(f'O dado foi lançado {total_de_lancamentos} vezes')
+    print(f'O número 1 caiu {numero_1} vezes')
+    print(f'O número 2 caiu {numero_2} vezes')
+    print(f'O número 3 caiu {numero_3} vezes')
+    print(f'O número 4 caiu {numero_4} vezes')
+    print(f'O número 5 caiu {numero_5} vezes')
+    print(f'O número 6 caiu {numero_6} vezes')
+    print(f'O lado com o número {posicao_maior+1} caiu mais vezes ({lado_que_caiu_mais_vezes} vezes)')

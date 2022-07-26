@@ -58,26 +58,35 @@ def rodar_programa_de_caixa():
     """Escreva aqui em baixo a sua solução"""
 
     print('Lojas Tabajara')
-    i = 1
-    total = 0
-    while True:
-        preco = float(input('Produto %d: R$ ' % i))
-        if preco == 0:
-            break
-        total += preco
-        i += 1
+    p = float(input('Digite um valor:'))
+    if p == -1:
+        print('-------------------')
+        print('Programa encerrado!')
+        return None
 
-    print(f'Total: R$ {total:.2f}')
-    dinheiro = float(input('Digite o valor fornecido pelo cliente: '))
-    print(f'Dinheiro: R${dinheiro:>9.2f}')
+    total = 0
+
+    while not p == -1:
+        total += p
+        if p == 0:
+            print(f'Total     : R$   {total:.2f}')
+            dinheiro = float(input('Digite um valor:'))
+            print(f'Dinheiro  : R$   {dinheiro:.2f}')
+            troco = dinheiro - total
+            print(f'Troco     : R$   {troco:.2f}')
+            total = 0
+            print('-------------------')
+            print('Lojas Tabajara')
+
+        p = float(input('Digite um valor:'))
+
+    print(f'Total     : R$   {total:.2f}')
+    dinheiro = float(input('Digite um valor:'))
+    print(f'Dinheiro  : R${dinheiro:>7.2f}')
     troco = dinheiro - total
-    print(f'Troco: R$ {troco:>9.2f}')
+    print(f'Troco     : R$   {troco:.2f}')
     print('-------------------')
     print('Programa encerrado!')
-
-
-
-
 
 
 

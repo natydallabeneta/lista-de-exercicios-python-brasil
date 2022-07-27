@@ -32,3 +32,21 @@ Quantidade de Parcelas  % de Juros sobre o valor inicial da dívida
 
 def gerar_dados_de_financiamente(valor_inicial: float):
     """Escreva aqui em baixo a sua solução"""
+
+    # IMPRIMIR CABEÇALHO E OS DADOS DO VALOR INICIAL, QUE NÃO SOFREM ALTERAÇÕES.
+    print('Valor da Dívida Valor dos Juros Quantidade de Parcelas  Valor da Parcela')
+    print(f'R$ {valor_inicial:.2f}      0%              1                       R${valor_inicial:>10.2f}')
+
+    # VALOR INICIAL DE PARCELA E JUROS
+    numero_de_parcelas = 3
+    juros = 10
+
+    # FAZER UM LOOP COM OS CALCULOS SOLICITADOS E INCREMENTAR A PARCELA COM 3 UNID E JUROS COM 5% A CADA RODADA DO FOR.
+    for i in range(1, 5):
+        valor = valor_inicial
+        calculo_do_juros = valor * (juros/100)
+        valor_atualizado = valor + calculo_do_juros
+        valor_da_parcela = valor_atualizado/numero_de_parcelas
+        print(f'R$ {valor_atualizado:.2f}      {juros}%             {numero_de_parcelas:<24}R$    {valor_da_parcela:>6.2f}')
+        numero_de_parcelas += 3
+        juros += 5

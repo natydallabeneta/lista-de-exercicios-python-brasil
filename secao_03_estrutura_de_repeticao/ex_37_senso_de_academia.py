@@ -78,15 +78,8 @@ def rodar_senso():
     while not nome == '0':
         nome = input('Digite o seu nome: ')
 
-        if nome == '0':
-            print(f'Cliente mais alto: {mais_alto[0]}, com {mais_alto[1]} centímetros')
-            print(f'Cliente mais baixo: {mais_baixo[0]}, com {mais_baixo[1]} centímetros')
-            print(f'Cliente mais magro: {mais_magro[0]}, com {mais_magro[1]} kilos')
-            print(f'Cliente mais gordo: {mais_gordo[0]}, com {mais_gordo[1]} kilos')
-            print('--------------------------------------------------')
-            print(f'Media de altura dos clientes: {media_altura:.1f} centímetros')
-            print(f'Media de peso dos clientes: {media_peso:.1f} kilos')
-        else:
+        # Incluir novamente uma condição de parada para o while
+        if not nome == '0':
             total_de_pessoas += 1
             altura = int(input('Digite a sua altura: '))
             total_de_alturas += altura
@@ -103,3 +96,11 @@ def rodar_senso():
                 mais_gordo = [nome, peso]
             if peso < mais_magro[1]:
                 mais_magro = [nome, peso]
+
+    print(f'Cliente mais alto: {mais_alto[0]}, com {mais_alto[1]} centímetros')
+    print(f'Cliente mais baixo: {mais_baixo[0]}, com {mais_baixo[1]} centímetros')
+    print(f'Cliente mais magro: {mais_magro[0]}, com {mais_magro[1]} kilos')
+    print(f'Cliente mais gordo: {mais_gordo[0]}, com {mais_gordo[1]} kilos')
+    print('--------------------------------------------------')
+    print(f'Media de altura dos clientes: {media_altura:.1f} centímetros')
+    print(f'Media de peso dos clientes: {media_peso:.1f} kilos')

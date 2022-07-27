@@ -68,12 +68,10 @@ def rodar_senso():
     mais_magro = [nome, peso]
     mais_gordo = [nome, peso]
 
-    # Calcular média dos dados
+    # Totais para calculo das médias
     total_de_pessoas = 1
     total_de_alturas = altura
     total_de_peso = peso
-    media_altura = float(total_de_alturas / total_de_pessoas)
-    media_peso = float(total_de_peso / total_de_pessoas)
 
     while not nome == '0':
         nome = input('Digite o seu nome: ')
@@ -83,10 +81,8 @@ def rodar_senso():
             total_de_pessoas += 1
             altura = int(input('Digite a sua altura: '))
             total_de_alturas += altura
-            media_altura = total_de_alturas / total_de_pessoas
             peso = int(input('Digite o seu peso: '))
             total_de_peso += peso
-            media_peso = float(total_de_peso / total_de_pessoas)
 
             if mais_alto[1] < altura:
                 mais_alto = [nome, altura]
@@ -96,6 +92,9 @@ def rodar_senso():
                 mais_gordo = [nome, peso]
             if peso < mais_magro[1]:
                 mais_magro = [nome, peso]
+
+    media_altura = float(total_de_alturas / total_de_pessoas)
+    media_peso = float(total_de_peso / total_de_pessoas)
 
     print(f'Cliente mais alto: {mais_alto[0]}, com {mais_alto[1]} centímetros')
     print(f'Cliente mais baixo: {mais_baixo[0]}, com {mais_baixo[1]} centímetros')

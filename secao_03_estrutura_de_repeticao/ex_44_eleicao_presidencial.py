@@ -90,3 +90,35 @@ from collections import Counter
 
 def apurar_votos(*votos):
     """Escreva aqui em baixo a sua solução"""
+
+    bostonaro = 0
+    luladrao = 0
+    silmanta = 0
+    isentao = 0
+    votos_nnulos = 0
+    votos_brancos = 0
+    total_votos = len(votos)
+
+# contagem de votos
+    for i in votos:
+        if i == '1':
+            bostonaro += 1
+        if i == '2':
+            luladrao += 1
+        if i == '3':
+            silmanta += 1
+        if i == '4':
+            isentao += 1
+        if i == '5':
+            votos_nnulos += 1
+        if i == '6':
+            votos_brancos += 1
+
+    print('Código do Candidato Nome do Candidato Votos Porcentagem sobre total')
+    print(f'1                   Bostonaro         {bostonaro}{100/total_votos*bostonaro:10.1f}%')
+    print(f'2                   Luladrão          {luladrao}{100/total_votos*luladrao:10.1f}%')
+    print(f'3                   Dilmanta          {silmanta}{100/total_votos*silmanta:10.1f}%')
+    print(f'4                   FHC Isentão       {isentao}{100/total_votos*isentao:10.1f}%')
+    print(f'-------------------------------------------------------------------')
+    print(f'5                   Votos Nulos       {votos_nnulos}{100/total_votos*votos_nnulos:10.1f}%')
+    print(f'6                   Votos Brancos     {votos_brancos}{100/total_votos*votos_brancos:10.1f}%')

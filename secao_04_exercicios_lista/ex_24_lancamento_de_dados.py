@@ -47,8 +47,6 @@ def lancar_dados(*valor_lancamentos):
     numero_6 = valor_lancamentos.count(6)
 
     lado_que_caiu_mais_vezes = max(numero_1, numero_2, numero_3, numero_4, numero_5, numero_6)
-
-    lado_que_caiu_mais_vezes = max(numero_1, numero_2, numero_3, numero_4, numero_5, numero_6)
     posicao_maior = (numero_1, numero_2, numero_3, numero_4, numero_5, numero_6).index(lado_que_caiu_mais_vezes)
 
     print(f'O dado foi lançado {total_de_lancamentos} vezes')

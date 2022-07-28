@@ -42,6 +42,7 @@ def calcular_estatisticas(*cidades):
     total_cidades_menos_150 = 0
     total_de_acidentes_menos_150 = 0
 
+    # UTILIZAR O FOR PARA DESEMPACOTAR OS VALORES
     for item in cidades:
         nome = item[0]
         numero_de_veiculos = item[1]
@@ -49,7 +50,7 @@ def calcular_estatisticas(*cidades):
         total_de_veiculos += numero_de_veiculos
         indice_acidente = (numero_de_acidentes / numero_de_veiculos) * 1000
 
-        # ENCONTRAR O MAIOR E MENOR INDICE DE ACIDENTE
+    # ENCONTRAR O MAIOR E MENOR INDICE DE ACIDENTE
         if maior_indice_de_acidentes < indice_acidente:
             maior_indice_de_acidentes = indice_acidente
             nome_da_cidade_com_maior_indice = nome
@@ -58,7 +59,7 @@ def calcular_estatisticas(*cidades):
             menor_indice_de_acidentes = indice_acidente
             nome_da_cidade_com_menor_indice = nome
 
-        # DADOS PARA CIDADES COM MENOS DE 150_000 CARROS
+    # DADOS PARA CIDADES COM MENOS DE 150_000 CARROS
         if numero_de_veiculos <= 150000:
             total_cidades_menos_150 += 1
             total_de_acidentes_menos_150 += numero_de_acidentes

@@ -17,3 +17,21 @@ imprima o número de alunos com média maior ou igual a 7.0, e imprima separado 
 def calcular_media(*notas) -> int:
     """Escreva aqui em baixo a sua solução"""
 
+    maior_7 = 0
+    menor_7 = 0
+
+    for item in notas:
+        total_notas_por_aluno = len(item)
+        soma_das_notas = 0
+
+        for i in item:
+            soma_das_notas += i
+        media = soma_das_notas/total_notas_por_aluno
+
+        if media >= 7:
+            maior_7 += 1
+        else:
+            menor_7 += 1
+
+    print(f'Alunos com media >= 7.0: {maior_7}')
+    print(f'Alunos com media < 7.0: {menor_7}')

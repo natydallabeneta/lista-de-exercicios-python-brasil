@@ -11,7 +11,7 @@ comprar apenas galões de 3,6 litros;
 misturar latas e galões, de forma que o custo seja menor.
 Acrescente 10% de folga e sempre arredonde os valores para cima, isto é, considere latas cheias.
 
-    >>> from secao_01_estrutura_sequencial import ex_17_loja_de_tintas_complexa
+    >>> import ex_17_loja_de_tintas_complexa
     >>> ex_17_loja_de_tintas_complexa.input = lambda k: '100'
     >>> ex_17_loja_de_tintas_complexa.calcular_latas_e_preco_de_tinta()
     Você deve comprar 19 litros de tinta.
@@ -36,7 +36,7 @@ def calcular_latas_e_preco_de_tinta():
     area_a_ser_pintada = int(input('Digite a área a ser pintada: '))
     area_com_folga = area_a_ser_pintada * 1.1
     litros_por_metros = 6
-    litros_a_serem_usados = area_com_folga/litros_por_metros
+    litros_a_serem_usados = math.ceil(area_com_folga/litros_por_metros)
 
     litros_por_lata = 18
     numero_de_latas = math.ceil(litros_a_serem_usados/litros_por_lata)
@@ -48,7 +48,7 @@ def calcular_latas_e_preco_de_tinta():
     valor_apenas_com_galoes = numero_de_galao*25
     sobra_galao = (numero_de_galao * litros_por_galao) - litros_a_serem_usados
 
-    #compra otimizada por valor
+# compra otimizada por valor
 
     numero_de_latas_otimizado = math.floor(litros_a_serem_usados / litros_por_lata)
     valor_de_latas = numero_de_latas_otimizado * 80
@@ -60,7 +60,7 @@ def calcular_latas_e_preco_de_tinta():
     sobra_lata_galao = (numero_de_latas_otimizado * litros_por_lata) + (numero_de_galao_otimizado * litros_por_galao) - litros_a_serem_usados
 
 
-    print(f'Você deve comprar {round(litros_a_serem_usados)} litros de tinta.')
+    print(f'Você deve comprar {litros_a_serem_usados} litros de tinta.')
     print(f'Você pode comprar {math.ceil(numero_de_latas)} lata(s) de 18 litros a um custo de R$ {valor_apenas_com_latas}. Vão sobrar {sobra_lata:.1f} litro(s) de tinta.')
     print(f'Você pode comprar {numero_de_galao} lata(s) de 3.6 litros a um custo de R$ {valor_apenas_com_galoes}. Vão sobrar {sobra_galao:.1f} litro(s) de tinta.')
     print(f'Para menor custo, você pode comprar {numero_de_latas_otimizado} lata(s) de 18 litros e {numero_de_galao_otimizado} galão(ões) de 3.6 litros a um custo de R$ {valor_total}. Vão sobrar {sobra_lata_galao:.1f} litro(s) de tinta.')

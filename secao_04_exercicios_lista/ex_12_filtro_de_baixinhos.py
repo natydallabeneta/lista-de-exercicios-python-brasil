@@ -40,4 +40,37 @@ Mostre a média com uma casa decimal.
 def calcular_baixinhos_com_mais_de_13_anos(*alunos):
     """Escreva aqui em baixo a sua solução"""
 
+    soma_altura = 0
+    aluno_abaixo_da_media = 0
+    lista_altura = []
+    lista_alunos_maior_13 = []
+    lista_de_alunos_abaixo_media = []
 
+# Desempacotando dados para calculo da media
+    for item in alunos:
+        idade = item[1]
+        altura = float(item[2])
+        lista_altura.append(altura)
+        soma_altura += altura
+        if idade > 13:
+            lista_alunos_maior_13.append(item)
+
+    media = soma_altura / len(alunos)
+    print(f'Média de altura: {media:.1f} centímetros.')
+
+# Alunos com mais de 13 anos, abaixo da altura média
+    for item in lista_alunos_maior_13:
+        altura = float(item[2])
+
+        if altura < media:
+            aluno_abaixo_da_media += 1
+            lista_de_alunos_abaixo_media.append(item)
+
+    if aluno_abaixo_da_media >= 1:
+        print(f'Existe(m) {aluno_abaixo_da_media} aluno(s) com altura abaixo da média com mais de 13 anos:')
+    else:
+        print('Não há nenhum aluno abaixo da média')
+
+    for item, dados in enumerate(lista_de_alunos_abaixo_media, start=1):
+        nome, idade, altura = dados
+        print(f'{item}. {nome}, com {altura} centímetros e {idade} ano(s) de idade')

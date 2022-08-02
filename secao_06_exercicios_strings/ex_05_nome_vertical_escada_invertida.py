@@ -35,3 +35,10 @@ Nome na vertical em escada invertida. Altere o programa anterior de modo que a e
 
 def inverter_escada(nome:str):
     """Escreva aqui em baixo a sua solução"""
+
+    nome_user = nome
+
+    while not nome_user == '':
+        print(nome_user)
+        nome_user = (nome_user[:-1])
+

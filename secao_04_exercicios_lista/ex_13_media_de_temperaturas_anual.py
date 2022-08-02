@@ -17,7 +17,7 @@ e em que mês elas ocorreram (mostrar o mês por extenso: 1 – Janeiro, 2 – F
     - len()
 
 
-    >>> from secao_04_exercicios_lista import ex_13_media_de_temperaturas_anual
+    >>> import ex_13_media_de_temperaturas_anual
 
     >>> meses_vs_temperaturas = ['25', '33', '19', '16', '15', '20', '25', '29', '25', '27', '33', '30']
     >>> ex_13_media_de_temperaturas_anual.input = lambda k: meses_vs_temperaturas.pop()
@@ -47,3 +47,22 @@ e em que mês elas ocorreram (mostrar o mês por extenso: 1 – Janeiro, 2 – F
 def temperaturas_acima_da_media():
     """Escreva aqui sua solução: """
 
+# Criar uma variável com os meses do ano e uma variável vazia para adicionar as temperaturas:
+    meses = ["Janeiro:", "Fevereiro:", "Março:", "Abril:", "Maio:", "Junho:", "Julho:", "Agosto:", "Setembro:",
+             "Outubro:", "Novembro:", "Dezembro:"]
+
+    meses_vs_temperaturas = []
+
+# Fazer um "for" para solicitar os inputs da temperatua e no input utilizar uma "f'string" para ligar o mês com o valor
+# da temperatura e adicionar os valores na variável vazia.
+
+    for i in range(12):
+        meses_vs_temperaturas.append(int(input(f'Digite a media de temperatura de {meses[i]} : ')))
+
+    media = sum(meses_vs_temperaturas)/12
+    print(f'Média anual: {media:.2f} Graus')
+
+# Imprimir os dados conforme os indices
+    for i in range(12):
+        if meses_vs_temperaturas[i] > media:
+            print(f"{i+1:>2} - {meses[i]:<14} {meses_vs_temperaturas[i]}°")

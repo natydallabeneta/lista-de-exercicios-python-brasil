@@ -14,8 +14,10 @@ para um n informado pelo usuário. Use uma função que receba um valor n inteir
 
 """
 
-for linha in range(0, 11):
-    for coluna in range(0, linha):
-        print(linha, end=' ')
-    print('')
+
+def piramide(n):
+    for linha in range(n+1):
+        for coluna in range(0, linha):
+            print(linha, end=' ')
+        print('')
 

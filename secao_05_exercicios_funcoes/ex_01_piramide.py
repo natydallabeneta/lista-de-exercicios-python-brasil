@@ -13,3 +13,9 @@ Faça um programa para imprimir:
 para um n informado pelo usuário. Use uma função que receba um valor n inteiro e imprima até a n-ésima linha.
 
 """
+
+for linha in range(0, 11):
+    for coluna in range(0, linha):
+        print(linha, end=' ')
+    print('')
+
